@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Task 9</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="wrapper__task math-task">
+        <a href="../index.html" class="math-task__link">До списку задач</a>
+        <p class="math-task__description">
+          Задача 9. Користувач загадує число. Комп’ютер задає питання поки не вгадає число користувача (використати
+          confirm).
+        </p>
+        <script>
+          const userNumber = parseInt(prompt("Введіть число від 1 до 50"))
+          let counter = 1
+          let guessedNumber
+          do {
+            let randomNumber = 1 + Math.floor(Math.random() * 50)
+            guessedNumber = confirm(`Спроба ${counter} Ваше число ${randomNumber}?`)
+            counter++
+          } while (guessedNumber !== true)
+          document.write("<p>Комп'ютер вгадав Ваше число!!!</p>")
+        </script>
+      </section>
+    </div>
+  </body>
+</html>

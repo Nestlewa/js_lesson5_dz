@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Task 12</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="wrapper__task math-task">
+        <a href="../index.html" class="math-task__link">До списку задач</a>
+        <p class="math-task__description">
+          Задача 12. Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як
+          одне з чотирьох зображень. Вивести ці зображення і повідомити виграш користувача (три перших зображення 100
+          грн, три других – 200, три третіх – 500, три четвертих зображення – 1000грн). Використати цикли і switch (для
+          вибору зображення за номером).
+        </p>
+        <script>
+          let blackberry = 0
+          let apple = 0
+          let banana = 0
+          let orange = 0
+          let personalPrize
+
+          for (let i = 0; i < 3; i++) {
+            const randomFruitNumber = 1 + Math.floor(Math.random() * 4)
+            switch (randomFruitNumber) {
+              case 1:
+                blackberry++
+                break
+              case 2:
+                apple++
+                break
+              case 3:
+                banana++
+                break
+              case 4:
+                orange++
+                break
+            }
+            document.write(`<img src="../img/${randomFruitNumber}.png"> `)
+          }
+          if (blackberry === 3) personalPrize = "100uh"
+          else if (apple === 3) personalPrize = "200uh"
+          else if (banana === 3) personalPrize = "500uh"
+          else if (orange === 3) personalPrize = "1000uh"
+          else personalPrize = "Sorry, not this time"
+          document.write(`<p>Your prize is ---- ${personalPrize}</p>`)
+        </script>
+        <!-- <img src="../img/image1.png" /> -->
+      </section>
+    </div>
+  </body>
+</html>

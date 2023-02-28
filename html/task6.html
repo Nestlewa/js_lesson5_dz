@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Task 6</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="wrapper__task math-task">
+        <a href="../index.html" class="math-task__link">До списку задач</a>
+        <p class="math-task__description">Задача 6. Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком</p>
+        <script>
+          let num = 1
+          //таблиця
+          for (let t = 1; t <= 3; t++) {
+            document.write(`<table border = "2px"><tbody>`)
+            //рядки
+            for (let r = 1; r <= 3; r++) {
+              document.write(`<tr>`)
+              for (let c = 1; c <= 3; c++) {
+                document.write(`<td>${num}</td>`)
+                num++
+              }
+              document.write(`</tr>`)
+            }
+            document.write(`</table></tbody>`)
+          }
+        </script>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Task 13</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="wrapper__task math-task">
+        <a href="../index.html" class="math-task__link">До списку задач</a>
+        <p class="math-task__description">
+          Задача 13. Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M. Маючи К
+          снарядів користувач намагається потопити корабель.
+        </p>
+        <script>
+          const userSizeX = parseInt(prompt("Введіть довжину поля по осі Х:"))
+          const userSizeY = parseInt(prompt("Введіть довжину поля по осі Y:"))
+          let shotQuantity = parseInt(prompt("Введіть кількість пострілів за яку Ви хочете збити корабель"))
+
+          let shipX = 1 + Math.floor(Math.random() * userSizeX)
+          let shipY = 1 + Math.floor(Math.random() * userSizeY)
+
+          const shipPosition = String(shipX) + String(shipY)
+          console.log(shipPosition)
+          for (let i = 1; i <= shotQuantity; i++) {
+            let userPositionX = prompt("Введіть координату для пострілу по осі Х:")
+            let userPositionY = prompt("Введіть координату для пострілу по осі Y:")
+            let userShipPosition = userPositionX + userPositionY
+            console.log(userShipPosition)
+            if (shipPosition === userShipPosition) {
+              document.write("<p>Вам вдалось збити корабель</p>")
+              break
+            }
+            if (i === shotQuantity) document.write("<p>Вам, нажаль, не вдалось збити корабель</p>")
+          }
+        </script>
+        <!-- <img src="../img/image1.png" /> -->
+      </section>
+    </div>
+  </body>
+</html>

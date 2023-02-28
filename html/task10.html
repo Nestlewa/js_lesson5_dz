@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Task 10</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="wrapper__task math-task">
+        <a href="../index.html" class="math-task__link">До списку задач</a>
+        <p class="math-task__description">
+          Задача 10. Знайти суму всіх непарних чисел, що знаходяться між заданими користувачем числами.
+        </p>
+        <script>
+          const rangeStart = parseInt(prompt("Введіть початкове значення діапазону"))
+          const rangeEnd = parseInt(prompt("Введіть кінцеве значення діапазону"))
+          let sum = 0
+
+          for (let num = rangeStart; num < rangeEnd; num++) if (num % 2 !== 0) sum += num
+
+          document.write(`<p>Сума непарних чисел від ${rangeStart} до ${rangeEnd} буде ${sum}</p>`)
+        </script>
+      </section>
+    </div>
+  </body>
+</html>

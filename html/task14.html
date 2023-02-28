@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Task 14</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="wrapper__task math-task">
+        <a href="../index.html" class="math-task__link">До списку задач</a>
+        <p class="math-task__description">
+          Задача 14. Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач поступово вводить суму
+          грошей до тих пір, поки суми не буде достатньо для оплати товарів (кожного разу користувачу повідомляють, яку
+          ще суму потрібно ввести).
+        </p>
+        <script>
+          let amountToPay = 450
+          do {
+            let userPay = parseFloat(prompt(`Вам необхідно сплатити ${amountToPay}грн, скільки Ви зараз заплатите?`))
+            amountToPay = amountToPay - userPay
+          } while (amountToPay > 0)
+          document.write("<p>Ви молодець, всі кошти внесено</p>")
+        </script>
+      </section>
+    </div>
+  </body>
+</html>

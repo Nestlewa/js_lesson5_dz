@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Task 15</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="wrapper__task math-task">
+        <a href="../index.html" class="math-task__link">До списку задач</a>
+        <p class="math-task__description">
+          Задача 15. Користувача поступово вводить показники температури протягом року. Знайти середню температуру.
+        </p>
+        <script>
+          let sumTemp = 0
+          let averageTemp = 0
+          let counter = 0
+
+          for (let i = 1; i <= 12; i++) {
+            let userTempIndicators = parseFloat(prompt(`Введіть показник температури за ${i} місяць`))
+            if (!isFinite(userTempIndicators)) {
+              averageTemp = sumTemp / counter
+              alert(`Середнє значення за ${counter} місяців буде ${averageTemp}`)
+              break
+            }
+            counter++
+            sumTemp += userTempIndicators
+          }
+          averageTemp = sumTemp / counter
+          document.write(`<p>Середнє значення температури ${averageTemp}</p>`)
+        </script>
+      </section>
+    </div>
+  </body>
+</html>
